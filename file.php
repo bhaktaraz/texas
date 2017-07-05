@@ -47,13 +47,13 @@ fwrite($f1, $output);
 fclose($f1);
 
 // Write to CSV
-$file = "employees.csv";
+$file = "students.csv";
 $f = fopen($file, "a");
 
 $newFields = array(
-    array('Tom', 'Jones', 36, 'Accountant'),
-    array('Freda', 'Williams', 45, 'Analyst'),
-    array('Brenda', 'Collins', 34, 'Engineer'));
+    array('Ram', 'Prashad', 36, 'Good'),
+    array('Shyam', 'Singh', 45, 'Excellent'),
+    array('Hari', 'Bahadur', 34, 'Best'));
 
 foreach($newFields as $fields)  {
     fputcsv($f, $fields);
@@ -61,7 +61,7 @@ foreach($newFields as $fields)  {
 fclose($f);
 
 // Read From CSV
-$file = "employees.csv";
+$file = "students.csv";
 $f = fopen($file, "r");
 while ($record = fgetcsv($f)) {
     foreach($record as $field) {
